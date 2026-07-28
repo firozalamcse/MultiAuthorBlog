@@ -342,7 +342,6 @@ http://127.0.0.1:8000/
 # 🔮 Future Improvements
 
 - Rich text editor integration
-- User profile pictures
 - Email notifications
 - Social media sharing
 - REST API development
@@ -369,10 +368,15 @@ Through this project, I practiced:
 ---
 
 # 👨‍💻 Author
+## 👨‍💻 Author
 
 **Firoz Alam**
 
-Full Stack Web Development with Python Django & React
+Software Developer
+
+Passionate about building scalable web applications using Python, Django, and modern web technologies.
+
+Full Stack Web Development with Python, Django & React
 
 ---
 
