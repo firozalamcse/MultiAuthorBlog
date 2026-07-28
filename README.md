@@ -226,9 +226,144 @@ git clone your-github-repository-url
 
 cd MultiAuthorBlog
 ```
-2. Create Virtual Environment
-3. Install Dependencies
-4. Environment Configuration
-5. Migration
-6. Create Superuser
-7. Run Server
+
+---
+
+## 2. Create Virtual Environment
+
+```bash
+python -m venv env
+```
+
+Activate virtual environment:
+
+### Windows
+
+```bash
+env\Scripts\activate
+```
+
+---
+
+## 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4. Environment Configuration
+
+Create a `.env` file in the project root:
+
+```env
+SECRET_KEY=your_secret_key
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1,localhost
+```
+
+---
+
+## 5. Apply Database Migration
+
+```bash
+python manage.py migrate
+```
+
+---
+
+## 6. Create Superuser
+
+```bash
+python manage.py createsuperuser
+```
+
+---
+
+## 7. Run Development Server
+
+```bash
+python manage.py runserver
+```
+
+Open your browser:
+
+```
+http://127.0.0.1:8000/
+```
+
+---
+
+# 📸 Screenshots
+
+## Home Page
+
+_Add screenshot here_
+
+---
+
+## Blog List Page
+
+_Add screenshot here_
+
+---
+
+## Blog Detail Page
+
+_Add screenshot here_
+
+---
+
+## Author Dashboard
+
+_Add screenshot here_
+
+---
+
+## Login & Register Pages
+
+_Add screenshot here_
+
+---
+
+# 🔮 Future Improvements
+
+- Rich text editor integration
+- User profile pictures
+- Email notifications
+- Social media sharing
+- REST API development
+- React frontend integration
+- Advanced recommendation system
+
+---
+
+# 📌 Learning Outcomes
+
+Through this project, I practiced:
+
+- Django MVT architecture
+- Authentication system
+- Custom User Model
+- CRUD operations
+- Model relationships
+- File upload handling
+- Search and filtering
+- Pagination
+- Database migrations
+- Git and GitHub workflow
+
+---
+
+# 👨‍💻 Author
+
+**Firoz Alam**
+
+Full Stack Web Development with Python Django & React
+
+---
+
+# 📄 License
+
+This project is created for educational and portfolio purposes.
