@@ -181,26 +181,28 @@ The project includes:
 ---
 
 # 📂 Project Structure
+
+```text
 MultiAuthorBlog/
 
 │
 ├── accounts/
-│ ├── models.py
-│ ├── views.py
-│ ├── forms.py
-│ └── urls.py
+│   ├── models.py
+│   ├── views.py
+│   ├── forms.py
+│   └── urls.py
 │
 ├── blog/
-│ ├── models.py
-│ ├── views.py
-│ ├── forms.py
-│ ├── urls.py
-│ └── templates/
+│   ├── models.py
+│   ├── views.py
+│   ├── forms.py
+│   ├── urls.py
+│   └── templates/
 │
 ├── config/
-│ ├── settings.py
-│ ├── urls.py
-│ └── wsgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
 │
 ├── templates/
 │
@@ -212,6 +214,7 @@ MultiAuthorBlog/
 ├── manage.py
 ├── README.md
 └── .env
+```
 
 
 # ⚙️ Installation & Setup
@@ -222,3 +225,10 @@ MultiAuthorBlog/
 git clone your-github-repository-url
 
 cd MultiAuthorBlog
+```
+2. Create Virtual Environment
+3. Install Dependencies
+4. Environment Configuration
+5. Migration
+6. Create Superuser
+7. Run Server
