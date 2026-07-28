@@ -297,33 +297,45 @@ http://127.0.0.1:8000/
 
 # 📸 Screenshots
 
-## Home Page
+## 🏠 Home Page
 
-_Add screenshot here_
-
----
-
-## Blog List Page
-
-_Add screenshot here_
+![Home Page](screenshots/home.jpg)
 
 ---
 
-## Blog Detail Page
+## 📝 Blog List Page
 
-_Add screenshot here_
-
----
-
-## Author Dashboard
-
-_Add screenshot here_
+![Blog List](screenshots/blog-list.jpg)
 
 ---
 
-## Login & Register Pages
+## 📄 Blog Detail Page
 
-_Add screenshot here_
+![Blog Detail](screenshots/blog-detail.jpg)
+
+---
+
+## 📊 Author Dashboard
+
+![Author Dashboard](screenshots/author-dashboard.jpg)
+
+---
+
+## 👤 Profile Page
+
+![Profile Page](screenshots/profile.jpg)
+
+---
+
+## 🔐 Login Page
+
+![Login Page](screenshots/login.jpg)
+
+---
+
+## 📝 Register Page
+
+![Register Page](screenshots/register.jpg)
 
 ---
 
