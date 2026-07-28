@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        Multi Author Blog
+    </title>
+
+
+    {% load static %}
+
+
+    <style>
+
+
+        body {
+
+            margin: 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+
+
+        .hero {
+
+
+            height: 100vh;
+
+
+            background-image:
+
+            linear-gradient(
+
+                rgba(0,0,0,0.55),
+
+                rgba(0,0,0,0.55)
+
+            ),
+
+            url("{% static 'images/sydney.png' %}");
+
+
+
+            background-size: cover;
+
+
+            background-position: center;
+
+
+            color: white;
+
+
+        }
+
+
+
+
+        /* Navigation Bar */
+
+
+        .navbar {
+
+
+            display: flex;
+
+
+            justify-content: flex-end;
+
+
+            align-items: center;
+
+
+            padding: 20px 50px;
+
+
+            position: relative;
+
+
+        }
+
+
+
+
+        /* Logo */
+
+
+        .logo {
+
+
+            position: absolute;
+
+
+            left: 40px;
+
+
+            top: 15px;
+
+
+        }
+
+
+
+
+
+        .logo img {
+
+
+            width: 90px;
+
+
+            height: 90px;
+
+
+            object-fit: contain;
+
+
+        }
+
+
+
+
+
+
+        /* Login Register Buttons */
+
+
+        .nav-btn {
+
+
+            text-decoration: none;
+
+
+            color: white;
+
+
+            border: 1px solid white;
+
+
+            padding: 10px 25px;
+
+
+            border-radius: 25px;
+
+
+            margin-left: 15px;
+
+
+            font-weight: bold;
+
+
+            transition: 0.3s;
+
+
+        }
+
+
+
+
+        .nav-btn:hover {
+
+
+            background: white;
+
+
+            color: black;
+
+
+        }
+
+
+
+
+
+        /* Main Content */
+
+
+        .content {
+
+
+            height: 75%;
+
+
+            display: flex;
+
+
+            flex-direction: column;
+
+
+            justify-content: center;
+
+
+            align-items: center;
+
+
+            text-align: center;
+
+
+            padding: 20px;
+
+
+        }
+
+
+
+
+
+        h1 {
+
+
+            font-size: 60px;
+
+
+            margin-bottom: 20px;
+
+
+            text-shadow: 2px 2px 5px black;
+
+
+        }
+
+
+
+
+
+        .tagline {
+
+
+            font-size: 30px;
+
+
+            margin-bottom: 20px;
+
+
+        }
+
+
+
+
+
+        p {
+
+
+            max-width: 800px;
+
+
+            font-size: 20px;
+
+
+            line-height: 1.7;
+
+
+        }
+
+
+
+
+
+
+        .main-btn {
+
+
+            margin-top: 40px;
+
+
+            padding: 15px 45px;
+
+
+            background: white;
+
+
+            color: black;
+
+
+            text-decoration: none;
+
+
+            border-radius: 30px;
+
+
+            font-size: 18px;
+
+
+            font-weight: bold;
+
+
+            transition: 0.3s;
+
+
+        }
+
+
+
+
+
+        .main-btn:hover {
+
+
+            background: #ddd;
+
+
+            transform: scale(1.05);
+
+
+        }
+
+
+
+
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<section class="hero">
+
+
+
+
+
+<nav class="navbar">
+
+
+<!-- Logo -->
+
+<div class="logo">
+
+    <img 
+    src="{% static 'images/logo.png' %}"
+    alt="Multi Author Blog Logo">
+
+</div>
+
+
+
+
+
+<!-- Right Menu -->
+
+
+<a href="{% url 'login' %}" class="nav-btn">
+
+🔐 Login
+
+</a>
+
+
+
+
+<a href="{% url 'register' %}" class="nav-btn">
+
+✍ Register
+
+</a>
+
+
+
+
+</nav>
+
+
+
+
+
+
+<div class="content">
+
+
+
+<h1>
+
+Multi Author Blog
+
+</h1>
+
+
+
+
+<div class="tagline">
+
+Create. Share. Inspire.
+
+</div>
+
+
+
+
+<p>
+
+A modern blogging platform where multiple authors
+can create, publish, and share their ideas with readers.
+
+</p>
+
+
+
+<p>
+
+Explore articles, discover new perspectives,
+and connect with creative writers.
+
+</p>
+
+
+
+
+
+<a
+
+href="{% url 'blog_list' %}"
+
+class="main-btn"
+
+>
+
+📖 View Blogs
+
+</a>
+
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+</body>
+
+
+</html>

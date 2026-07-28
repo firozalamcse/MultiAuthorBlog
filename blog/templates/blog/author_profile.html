@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        {{ author.username }} Profile
+    </title>
+
+</head>
+
+
+<body>
+
+
+<h1>
+    Author Profile
+</h1>
+
+
+<hr>
+
+
+<h2>
+    {{ author.username }}
+</h2>
+
+
+<p>
+    <strong>
+        Total Published Posts:
+    </strong>
+
+    {{ total_posts }}
+</p>
+
+
+<p>
+    <strong>
+        Total Views:
+    </strong>
+
+    {{ total_views }}
+</p>
+
+
+<p>
+    <strong>
+        Total Likes:
+    </strong>
+
+    {{ total_likes }}
+</p>
+
+
+<hr>
+
+
+<h2>
+    Published Blogs
+</h2>
+
+
+
+{% for blog in posts %}
+
+
+<div style="margin-bottom:30px;">
+
+
+    {% if blog.featured_image %}
+
+        <img 
+        src="{{ blog.featured_image.url }}"
+        width="250">
+
+    {% endif %}
+
+
+
+    <h3>
+
+        <a href="{% url 'blog_detail' blog.slug %}">
+
+            {{ blog.title }}
+
+        </a>
+
+    </h3>
+
+
+
+    <p>
+
+        {{ blog.content|truncatewords:25 }}
+
+    </p>
+
+
+
+    <p>
+
+        Views: {{ blog.view_count }}
+
+        |
+
+        Likes: {{ blog.total_likes }}
+
+    </p>
+
+
+
+</div>
+
+
+<hr>
+
+
+{% empty %}
+
+
+<p>
+    No published posts available.
+</p>
+
+
+{% endfor %}
+
+
+
+<a href="{% url 'blog_list' %}">
+    ← Back to Blogs
+</a>
+
+
+
+</body>
+
+</html>

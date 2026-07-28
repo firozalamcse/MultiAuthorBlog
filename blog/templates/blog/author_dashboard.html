@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block title %}
+Author Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        Welcome, {{ request.user.username }}
+    </h2>
+
+    <div class="row mb-4">
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-center border-primary">
+                <div class="card-body">
+                    <h3>{{ total_posts }}</h3>
+                    <p class="mb-0">Total Posts</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-center border-success">
+                <div class="card-body">
+                    <h3>{{ published_posts }}</h3>
+                    <p class="mb-0">Published</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-center border-warning">
+                <div class="card-body">
+                    <h3>{{ draft_posts }}</h3>
+                    <p class="mb-0">Draft</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-center border-info">
+                <div class="card-body">
+                    <h3>{{ total_views }}</h3>
+                    <p class="mb-0">Total Views</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+
+        <h3>Recent Posts</h3>
+
+        <a href="{% url 'blog_create' %}" class="btn btn-success">
+            + Create New Post
+        </a>
+
+    </div>
+
+    {% if recent_posts %}
+
+    <table class="table table-bordered table-striped">
+
+        <thead class="table-dark">
+
+            <tr>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Views</th>
+                <th>Created</th>
+                <th width="180">Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for blog in recent_posts %}
+
+            <tr>
+
+                <td>{{ blog.title }}</td>
+
+                <td>
+                    {{ blog.status|title }}
+                </td>
+
+                <td>
+                    {{ blog.view_count }}
+                </td>
+
+                <td>
+                    {{ blog.created_at|date:"d M Y" }}
+                </td>
+
+                <td>
+
+                    <a href="{% url 'blog_detail' blog.slug %}"
+                       class="btn btn-sm btn-primary">
+                        View
+                    </a>
+
+                    <a href="{% url 'blog_update' blog.slug %}"
+                       class="btn btn-sm btn-warning">
+                        Edit
+                    </a>
+
+                    <a href="{% url 'blog_delete' blog.slug %}"
+                       class="btn btn-sm btn-danger">
+                        Delete
+                    </a>
+
+                </td>
+
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    {% else %}
+
+        <div class="alert alert-info">
+            You haven't created any posts yet.
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

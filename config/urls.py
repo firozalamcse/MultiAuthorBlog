@@ -10,13 +10,19 @@ from django.contrib import admin
 from django.urls import path, include
 from blog import views
 
+
 urlpatterns = [
     path("", views.home, name="home"),
+
     path("admin/", admin.site.urls),
 
     # Accounts App
     path("accounts/", include("accounts.urls")),
+
+    # Blog App
+    path("blog/", include("blog.urls")),
 ]
+
 
 if settings.DEBUG:
     urlpatterns += static(

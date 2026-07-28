@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        All Blogs
+    </title>
+
+    {% load static %}
+
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px;
+        }
+
+
+        img {
+            border-radius: 10px;
+        }
+
+
+        .filter-box {
+
+            background: #f5f5f5;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        select,
+        input {
+
+            padding: 8px;
+
+            margin-right: 10px;
+
+        }
+
+
+        button {
+
+            padding: 8px 15px;
+
+            cursor: pointer;
+
+        }
+
+
+        .blog-card {
+
+            margin-bottom: 30px;
+
+            border-bottom: 1px solid #ddd;
+
+            padding-bottom: 20px;
+
+        }
+
+
+        .btn {
+
+            text-decoration: none;
+
+            padding: 10px 15px;
+
+            background: black;
+
+            color: white;
+
+            border-radius: 5px;
+
+        }
+
+
+        .pagination a {
+
+            margin: 10px;
+
+            text-decoration: none;
+
+        }
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+<h1>
+    All Published Blogs
+</h1>
+
+
+
+<a href="{% url 'home' %}">
+    ← Back to Home
+</a>
+
+
+<br><br>
+
+
+
+<a href="{% url 'blog_create' %}" class="btn">
+    Create New Blog
+</a>
+
+
+<hr>
+
+
+
+<!-- Search + Filter -->
+
+<div class="filter-box">
+
+
+<form method="GET">
+
+
+<input
+type="text"
+name="q"
+placeholder="Search blogs..."
+value="{{ query }}"
+>
+
+
+
+<select name="category">
+
+
+<option value="">
+    All Categories
+</option>
+
+
+{% for category in categories %}
+
+
+<option
+
+value="{{ category.id }}"
+
+{% if selected_category == category.id|stringformat:"s" %}
+selected
+{% endif %}
+
+>
+
+{{ category.name }}
+
+</option>
+
+
+{% endfor %}
+
+
+</select>
+
+
+
+
+<select name="tag">
+
+
+<option value="">
+    All Tags
+</option>
+
+
+
+{% for tag in tags %}
+
+
+<option
+
+value="{{ tag.id }}"
+
+{% if selected_tag == tag.id|stringformat:"s" %}
+selected
+{% endif %}
+
+>
+
+{{ tag.name }}
+
+</option>
+
+
+
+{% endfor %}
+
+
+</select>
+
+
+
+<button type="submit">
+    Filter
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+{% for blog in blogs %}
+
+
+
+<div class="blog-card">
+
+
+
+{% if blog.featured_image %}
+
+
+<img
+
+src="{{ blog.featured_image.url }}"
+
+width="250"
+
+>
+
+
+{% endif %}
+
+
+
+
+<h2>
+
+
+<a href="{% url 'blog_detail' blog.slug %}">
+
+{{ blog.title }}
+
+</a>
+
+
+</h2>
+
+
+
+
+<p>
+
+<strong>
+Author:
+</strong>
+
+
+<a href="{% url 'author_profile' blog.author.username %}">
+
+{{ blog.author.username }}
+
+</a>
+
+
+</p>
+
+
+
+
+
+<p>
+
+<strong>
+Category:
+</strong>
+
+
+{{ blog.category.name }}
+
+</p>
+
+
+
+
+
+<p>
+
+{{ blog.content|truncatewords:30 }}
+
+</p>
+
+
+
+
+<p>
+
+❤️ Likes: {{ blog.total_likes }}
+
+|
+
+👁 Views: {{ blog.view_count }}
+
+</p>
+
+
+
+</div>
+
+
+
+
+{% empty %}
+
+
+<h3>
+No published blogs available.
+</h3>
+
+
+
+{% endfor %}
+
+
+
+
+
+
+<!-- Pagination -->
+
+
+<div class="pagination">
+
+
+{% if page_obj.has_previous %}
+
+
+<a href="?page={{ page_obj.previous_page_number }}">
+
+Previous
+
+</a>
+
+
+{% endif %}
+
+
+
+
+<span>
+
+Page {{ page_obj.number }}
+
+of
+
+{{ page_obj.paginator.num_pages }}
+
+</span>
+
+
+
+
+
+{% if page_obj.has_next %}
+
+
+<a href="?page={{ page_obj.next_page_number }}">
+
+Next
+
+</a>
+
+
+{% endif %}
+
+
+
+</div>
+
+
+
+
+</body>
+
+
+</html>
