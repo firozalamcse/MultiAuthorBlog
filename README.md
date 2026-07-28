@@ -222,7 +222,7 @@ MultiAuthorBlog/
 ## 1. Clone Repository
 
 ```bash
-git clone your-github-repository-url
+git clone https://github.com/firozalamcse/MultiAuthorBlog.git
 
 cd MultiAuthorBlog
 ```
@@ -294,48 +294,28 @@ http://127.0.0.1:8000/
 ```
 
 ---
+<h2>📸 Screenshots</h2>
 
-# 📸 Screenshots
+<h3>🏠 Home Page</h3>
+<img src="screenshots/home.jpg" width="900" alt="Home Page">
 
-## 🏠 Home Page
+<h3>📝 Blog List Page</h3>
+<img src="screenshots/blog-list.jpg" width="900" alt="Blog List">
 
-![Home Page](screenshots/home.jpg)
+<h3>📄 Blog Detail Page</h3>
+<img src="screenshots/blog-detail.jpg" width="900" alt="Blog Detail">
 
----
+<h3>📊 Author Dashboard</h3>
+<img src="screenshots/author-dashboard.jpg" width="900" alt="Author Dashboard">
 
-## 📝 Blog List Page
+<h3>👤 Profile Page</h3>
+<img src="screenshots/profile.jpg" width="900" alt="Profile">
 
-![Blog List](screenshots/blog-list.jpg)
+<h3>🔐 Login Page</h3>
+<img src="screenshots/login.jpg" width="900" alt="Login">
 
----
-
-## 📄 Blog Detail Page
-
-![Blog Detail](screenshots/blog-detail.jpg)
-
----
-
-## 📊 Author Dashboard
-
-![Author Dashboard](screenshots/author-dashboard.jpg)
-
----
-
-## 👤 Profile Page
-
-![Profile Page](screenshots/profile.jpg)
-
----
-
-## 🔐 Login Page
-
-![Login Page](screenshots/login.jpg)
-
----
-
-## 📝 Register Page
-
-![Register Page](screenshots/register.jpg)
+<h3>📝 Register Page</h3>
+<img src="screenshots/register.jpg" width="900" alt="Register">
 
 ---
 
