@@ -181,3 +181,51 @@ The project includes:
 ---
 
 # 📂 Project Structure
+MultiAuthorBlog/
+
+│
+├── accounts/
+│ ├── models.py
+│ ├── views.py
+│ ├── forms.py
+│ └── urls.py
+│
+├── blog/
+│ ├── models.py
+│ ├── views.py
+│ ├── forms.py
+│ ├── urls.py
+│ └── templates/
+│
+├── config/
+│ ├── settings.py
+│ ├── urls.py
+│ └── wsgi.py
+│
+├── templates/
+│
+├── static/
+│
+├── media/
+│
+├── requirements.txt
+├── manage.py
+├── README.md
+└── .env
+
+
+---
+
+তারপর নিচের অংশগুলোও paste করো:
+
+```md
+---
+
+# ⚙️ Installation & Setup
+
+## 1. Clone Repository
+
+```bash
+git clone your-github-repository-url
+
+cd MultiAuthorBlog
