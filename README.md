@@ -382,4 +382,4 @@ Full Stack Web Development with Python, Django & React
 
 # 📄 License
 
-This project is created for educational and portfolio purposes.
+© 2026 All Rights Reserved by Multi Author Blog
