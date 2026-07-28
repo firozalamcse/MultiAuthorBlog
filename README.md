@@ -214,13 +214,6 @@ MultiAuthorBlog/
 └── .env
 
 
----
-
-তারপর নিচের অংশগুলোও paste করো:
-
-```md
----
-
 # ⚙️ Installation & Setup
 
 ## 1. Clone Repository
