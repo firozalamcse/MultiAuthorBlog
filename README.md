@@ -357,15 +357,15 @@ Through this project, I practiced:
 ---
 
 # 👨‍💻 Author
-## 👨‍💻 Author
+
 
 **Firoz Alam**
 
 Software Developer
 
-Passionate about building scalable web applications using Python, Django, and modern web technologies.
+Full Stack Web Development with Python, Django & React, and modern web technologies.
 
-Full Stack Web Development with Python, Django & React
+
 
 ---
 
