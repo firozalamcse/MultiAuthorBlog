@@ -1,4 +1,4 @@
-# 🚀 Multi-Author Blogging Platform
+# <img src="screenshots/logo.png" alt="MultiAuthorBlog Logo" width="40"> Multi-Author Blogging Platform
 
 A full-featured **multi-author blogging platform** built with Django.
 
