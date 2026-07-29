@@ -312,7 +312,7 @@ http://127.0.0.1:8000/blog/dashboard/
 <img src="screenshots/blog-list.jpg" width="900" alt="Blog List">
 
 <h3>📄 Blog Detail Page</h3>
-<img src="screenshots/blog-detail.jpg" width="900" alt="Blog Detail">
+<img src="screenshots/blog-detail.png" width="900" alt="Blog Detail">
 
 <h3>📊 Author Dashboard</h3>
 <img src="screenshots/author-dashboard.jpg" width="900" alt="Author Dashboard">
@@ -324,7 +324,7 @@ http://127.0.0.1:8000/blog/dashboard/
 <img src="screenshots/login.jpg" width="900" alt="Login">
 
 <h3>📝 Register Page</h3>
-<img src="screenshots/register.jpg" width="900" alt="Register">
+<img src="screenshots/register.png" width="900" alt="Register">
 
 ---
 
