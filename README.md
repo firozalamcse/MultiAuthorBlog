@@ -268,8 +268,13 @@ ALLOWED_HOSTS=127.0.0.1,localhost
 ## 5. Apply Database Migration
 
 ```bash
+python manage.py makemigrations
+```
+
+```bash
 python manage.py migrate
 ```
+
 
 ---
 
@@ -291,6 +296,10 @@ Open your browser:
 
 ```
 http://127.0.0.1:8000/
+```
+
+```
+http://127.0.0.1:8000/blog/dashboard/
 ```
 
 ---
