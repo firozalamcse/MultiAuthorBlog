@@ -356,7 +356,7 @@ Through this project, I practiced:
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Developed By
 
 
 **Firoz Alam**
